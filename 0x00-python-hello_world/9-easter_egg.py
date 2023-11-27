@@ -1,6 +1,3 @@
 #!/usr/bin/python3
-with open("zen.txt", 'r') as z:
-    lis = z.read()
-    s = lis.split('\n')
-    for i in s:
-        print(i)
+import this
+# I made another sol in alt2 file
