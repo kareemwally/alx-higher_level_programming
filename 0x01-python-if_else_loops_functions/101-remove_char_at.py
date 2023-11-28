@@ -5,7 +5,5 @@ def remove_char_at(str, n):
         if i == n:
             continue
         else:
-            res+=str[i]
+            res += str[i]
     return res
-print(remove_char_at("Best School", 3))
-
