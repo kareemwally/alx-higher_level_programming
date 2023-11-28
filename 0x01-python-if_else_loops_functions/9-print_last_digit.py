@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 def print_last_digit(number):
+    x = 0
     if number < 0:
         x = (-1 * number % 10)
-        print(-x)
-        return -x
     else:
         x = number % 10
-        print(x)
-        return x
+    print(x, end = '')
+    return x
