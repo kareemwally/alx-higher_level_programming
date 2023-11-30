@@ -13,7 +13,7 @@ if __name__ == "__main__":
         m = int(sys.argv[1])
         n = int(sys.argv[3])
         operand = sys.argv[2]
-        print("{} {} {} ".format(m, operand, n), end = '')
+        print("{} {} {} ".format(m, operand, n), end='')
         if operand == '+':
             print("= {}".format(add(m, n)))
         elif operand == '-':
@@ -22,4 +22,3 @@ if __name__ == "__main__":
             print("= {}".format(div(m, n)))
         elif operand == '*':
             print("= {}".format(mul(m, n)))
-        
