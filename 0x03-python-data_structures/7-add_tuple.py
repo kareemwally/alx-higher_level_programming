@@ -11,4 +11,4 @@ def find_none(a):
     i = 2 - len(res)
     for j in range(i):
         res.append(0)
-    return(tuple(res))
+    return(res)
