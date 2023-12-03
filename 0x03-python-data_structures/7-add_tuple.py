@@ -4,4 +4,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
     b = tuple_b + (0, 0)
     res = a[0] + b[0], a[1] + b[1]
     return(res)
+
 # there's anothetr solution in alt_7.py
