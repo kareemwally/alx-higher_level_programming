@@ -2,7 +2,6 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     a = tuple_a + (0, 0)
     b = tuple_b + (0, 0)
-    res = a[0] + b[0], a[1] + b[1]
-    return(res)
+    return a[0] + b[0], a[1] + b[1]
 
 # there's anothetr solution in alt_7.py
