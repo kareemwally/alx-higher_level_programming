@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stddef.h>
 /**
- *is_palindrome :function to check symmetry
+ *is_palindrome -function to check symmetry
  *Description: that function checks symmetrical lists
  *@head: pointer to the base pointer of list
  *Return: (int)
