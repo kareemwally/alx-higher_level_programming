@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 /**
  *is_palindrome :function to check symmetry
  *Description: that function checks symmetrical lists
@@ -7,7 +8,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-if (*head == NULL)
+if (*head == NULL || (*head)->next == NULL)
 {
 return (1);
 }
