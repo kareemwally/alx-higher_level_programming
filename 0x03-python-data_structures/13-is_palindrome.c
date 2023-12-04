@@ -1,3 +1,5 @@
+#include "lists.h"
+#include <stddef.h>
 /**
  *is_palindrome :function to check symmetry
  *Description: that function checks symmetrical lists
