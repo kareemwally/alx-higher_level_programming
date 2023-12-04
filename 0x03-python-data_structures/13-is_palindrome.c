@@ -1,8 +1,7 @@
 #include "lists.h"
 #include <stddef.h>
 /**
- *is_palindrome -function to check symmetry
- *Description: that function checks symmetrical lists
+ *is_palindrome :function to check symmetry
  *@head: pointer to the base pointer of list
  *Return: (int)
  */
@@ -15,11 +14,31 @@ return (1);
 listint_t *current, *mov;
 current = *head;
 mov = *head;
-while (current->next != NULL)
+int n = 1;
+while(current->next != NULL)
 {
 current = current->next;
+n++;
 }
-while (1)
+if (n % 2 == 0)
+{
+while(1)
+{
+if (mov->n != current->n)
+{
+return (0);
+}
+mov = mov ->next;
+if (mov == current)
+{
+break;
+}
+current = current - 2;
+}
+}
+else
+{
+while(1)
 {
 if (mov->n != current->n)
 {
@@ -29,8 +48,9 @@ if (mov == current)
 {
 break;
 }
-mov = mov->next;
+mov = mov ->next;
 current = current - 2;
+}
 }
 return (1);
 }
