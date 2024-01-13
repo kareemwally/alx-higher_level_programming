@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 """
 that function only add two and only two integer type data
+
+>>> add_integer('a', 22)
+Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+>>> add_integer(2, 'a')
+Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
 """
 
 
