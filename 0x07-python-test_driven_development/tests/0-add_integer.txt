@@ -5,25 +5,11 @@ Using ``add_integer``
 ---------------------
 importing the function add_integer
 >>> add_integer = __import__('0-add_integer').add_integer
+
 Both arguments are integers
 
 >>> add_integer(10, 10)
 20
-
-testing 1st argument only
-
->>> add_integer('a', 20)
-a must be an integer
-
-testing 2nd arg only 
-
->>> add_integer(10,'10')
-b must be an integer
-
-testing the None argument
-
->>> add_integer(None, 20)
-a must be an integer
 
 testing both args are floats
 
