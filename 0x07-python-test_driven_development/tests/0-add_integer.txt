@@ -13,7 +13,7 @@ Both arguments are integers
 
 testing both args are floats
 
->>> add_integer(20.5, 20)
+>>> add_integer(20.5, 20.5)
 40
 
 only 2nd arg is float
@@ -22,5 +22,26 @@ only 2nd arg is float
 40
 
 only 1st arg is float
+
 >>> add_integer(10.5,10)
 20
+
+testing the None oparnd
+
+>>> add_integer('a', 2)
+Traceback (most recent call last):
+     ...
+TypeError: a must be an integer
+
+testing 2nd arg to be string
+
+>>> add_integer(20, 'b')
+Traceback (most recent call last):
+        ...
+TypeError: b must be an integer
+
+testing the None arg
+>>> add_integer(None,2)
+Traceback (most recent call last):
+     ...
+TypeError: a must be an integer
