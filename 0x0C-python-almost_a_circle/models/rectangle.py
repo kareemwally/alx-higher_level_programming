@@ -4,7 +4,7 @@ the rectangle class module
 """
 
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -14,7 +14,7 @@ class Rectangle(Base):
         """constructor of instances"""
         super().__inint(id)
         self.width = width
-        self.h`eight = height
+        self.height = height
         self.x = x
         self.y = y
 
