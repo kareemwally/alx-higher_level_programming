@@ -1,4 +1,6 @@
 -- the GROUP BY keyword to enhance query
-SELECT DISTINCT score, count(score) AS number
+SELECT DISTINCT score,
+COUNT(score) AS number
 FROM second_table
-GROUP BY score;
+GROUP BY score
+ORDER BY COUNT(score) DESC;
