@@ -1,5 +1,4 @@
--- script to link genre to SUM of works related to it
-USE hbtn_0d_tvshows;
+-- selecting the related number of shows
 SELECT tv_genres.name AS genre,
 COUNT(tv_genres.id) AS number_of_shows
 FROM tv_genres
