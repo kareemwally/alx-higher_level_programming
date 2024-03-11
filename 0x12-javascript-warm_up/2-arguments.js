@@ -4,7 +4,7 @@ if (x.length < 3) {
   console.log('No argument');
 }
 else if (x.length === 3) {
-  console.log('Argument found')
+  console.log('Argument found');
 } else {
-  console.log('Arguments found')
+  console.log('Arguments found');
 }
