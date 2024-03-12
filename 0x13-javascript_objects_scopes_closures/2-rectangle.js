@@ -6,6 +6,7 @@ class Rectangle {
       this.width = w;
     } else {
       Object.create(null);
+    }
   }
 }
 module.exports = Rectangle;
