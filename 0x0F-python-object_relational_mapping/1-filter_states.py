@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-''' a python script to connect to a localhost db'''
+''' a python script to connect to a localhost db
+and excute some query on it
+'''
 import MySQLdb
 import sys
 
@@ -10,8 +12,8 @@ def main():
         host="localhost", user=sys.argv[1],
         passwd=sys.argv[2], db=sys.argv[3]
         )
-    cur = db.cursor()  # creating the obj to handle queries
-    cur.execute("USE {0};".format(sys.argv[3]))  # whatever db you choose
+    cur = db.cursor()
+    cur.execute("USE {0};".format(sys.argv[3]))
     cur.execute(
         "SELECT * FROM {0}\
         WHERE {1} LIKE 'N%'\
