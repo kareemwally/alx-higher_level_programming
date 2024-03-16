@@ -15,8 +15,8 @@ def main():
     cur = db.cursor()
     cur.execute("USE {0};".format(sys.argv[3]))
     cur.execute(
-        "SELECT * FROM {0}\
-        WHERE {1} LIKE 'N%'\
+        "SELECT DISTINCT * FROM {0}\
+        WHERE {1} LIKE BINARY 'N%'\
         ORDER BY {2} ASC;"
         .format("states", "states.name", "states.id")
         )
