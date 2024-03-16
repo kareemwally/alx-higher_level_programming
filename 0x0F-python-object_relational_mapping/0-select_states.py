@@ -2,6 +2,8 @@
 ''' a python script to connect ti local host db'''
 import MySQLdb
 import sys
+
+
 def main():
     ''' the main function'''
     db = MySQLdb.connect(
@@ -19,5 +21,7 @@ def main():
         print(i)
     cur.close()
     db.close()
+
+
 if __name__ == "__main__":
     main()
