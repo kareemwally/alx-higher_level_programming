@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' a python script to connect ti local host db'''
+''' a python script to connect to a localhost db'''
 import MySQLdb
 import sys
 
@@ -13,7 +13,7 @@ def main():
     cur = db.cursor()
     cur.execute("USE {0};".format(sys.argv[3]))
     cur.execute(
-        "SELECT * FROM {0} ORDER BY {1} ASC LIMIT 5;"
+        "SELECT * FROM {0} ORDER BY {1} ASC;"
         .format('states', 'states.id')
         )
     res = cur.fetchall()
