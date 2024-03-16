@@ -19,7 +19,7 @@ def main():
         WHERE states.name = '{}'\
         ORDER BY cities.id ASC;".format(sys.argv[4]))
     res = cur.fetchall()
-    final = set(i[0] for i in res)
+    final = list(i[0] for i in res)
     print(*final, sep=", ")
     cur.close()
     db.close()
