@@ -8,7 +8,7 @@ db = MySQLdb.connect(
 cur = db.cursor()
 cur.execute("USE {0};".format(sys.argv[3]))
 cur.execute(
-    "SELECT * FROM {0} ORDER BY {1} ASC;"
+    "SELECT * FROM {0} ORDER BY {1} ASC LIMIT 5;"
     .format('states', 'states.id')
     )
 res = cur.fetchall()
