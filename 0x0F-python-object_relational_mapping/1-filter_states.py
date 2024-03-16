@@ -15,7 +15,7 @@ def main():
     cur.execute(
         "SELECT * FROM {0}\
         WHERE {1} LIKE 'N%'\
-        ORDER BY {2};"
+        ORDER BY {2} ASC;"
         .format("states", "states.name", "states.id")
         )
     res = cur.fetchall()
