@@ -19,7 +19,6 @@ def main():
 
     session = Session()
     query = session.query(State).order_by(State.id).all()
-    session.commit()
 
     for s in query:
         print("{}: {}".format(s.id, s.name))
