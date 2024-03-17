@@ -14,9 +14,3 @@ class State(Base):
         primary_key=True, unique=True
         )
     name = Column("name", String(128), nullable=False)
-
-    def __init__(self, id, name):
-        """ assign the values to table attributes"""
-
-        self.id = id
-        self.name = name
