@@ -6,6 +6,8 @@ import sys
 
 def main():
     """ the main function to execute SQL query """
+    if (len(sys.argv) > 5):
+        sys.exit(1)
     db = MySQLdb.connect(
         host="localhost",
         user=sys.argv[1],
@@ -13,8 +15,6 @@ def main():
         db=sys.argv[3]
         )
     cur = db.cursor()
-    if (len(sys.argv) > 5):
-        exit(1)
     query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC;"
     cur.execute(query.format(sys.argv[4]))
     res = cur.fetchall()
