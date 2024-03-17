@@ -11,7 +11,7 @@ class State(Base):
     __tablename__ = "states"
     id = Column(
         "id", Integer, nullable=False, autoincrement=True,
-        primary_key=True
+        primary_key=True, unique=True
         )
     name = Column("name", String(128), nullable=False)
 
