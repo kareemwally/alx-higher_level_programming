@@ -9,7 +9,7 @@ class State(Base):
     """ a class to connect to 'states' table"""
 
     __tablename__ = "states"
-    id = Column("id", Integer, autoincrement=True, primary_ket=True)
+    id = Column("id", Integer, autoincrement=True, primary_key=True)
     name = Column("name", String(128), nullable=False)
 
     def __init__(self, id, name):
