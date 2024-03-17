@@ -8,6 +8,7 @@ from sqlalchemy import delete
 import sys
 from model_state import Base, State
 
+
 def main():
     """ the main function"""
     connect = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -28,6 +29,7 @@ def main():
     session.commit()
 
     session.close()
+
 
 if __name__ == "__main__":
     main()
