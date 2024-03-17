@@ -23,7 +23,7 @@ def main():
     if query:
         print("{}".format(query.id))
     else:
-        print("Nothing")
+        print("Not found")
 
     session.close()
 
