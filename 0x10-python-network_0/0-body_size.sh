@@ -1,5 +1,10 @@
 #!/bin/bash
 # Send a cURL request and store the response in a temporary file
+#checking args number
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <URL>"
+    exit 1
+fi
 response_file=$(mktemp)
 curl -s -o "$response_file" "$url"
 
