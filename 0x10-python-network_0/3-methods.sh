@@ -1,3 +1,3 @@
 #!/bin/bash
 # a script to show available options
-curl -s --verbose "$1"
+curl -sI "$1" | grep -i "Allow" | awk '{print $2}'
