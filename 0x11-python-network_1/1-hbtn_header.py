@@ -7,7 +7,7 @@ def main():
     """ a script to fetch status of html request"""
     with urllib.request.urlopen(sys.argv[1]) as res:
         content = res.getheader("X-Request-Id")
-        print("{0}".format(res.header))
+        print("{0}".format(content))
 
 
 if __name__ == "__main__":
