@@ -3,6 +3,7 @@
 import urllib.request
 import sys
 
+
 def main():
     """ a script to fetch status of html request"""
     with urllib.request.urlopen(sys.argv[1]) as res:
