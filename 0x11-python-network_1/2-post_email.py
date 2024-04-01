@@ -9,7 +9,7 @@ def send_post_request(url, email):
     try:
         # Encode the email parameter
         data = urllib.parse.urlencode({'email': email}).encode('utf-8')
-        req = urllib.request.Request(url, data, method='POST')  # Specify method='POST'
+        req = urllib.request.Request(url, data, method='POST')
         # Create a POST request
         with urllib.request.urlopen(req) as response:
             # Read the response body and decode it
