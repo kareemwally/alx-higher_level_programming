@@ -21,9 +21,9 @@ def send_get_request(url):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python script.py <URL> <email>")
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <URL>")
         sys.exit(1)
 
     url = sys.argv[1]
-    send_post_request(url)
+    send_get_request(url)
