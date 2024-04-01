@@ -13,7 +13,7 @@ def main():
         if x_request_id:
             print("{0}".format(x_request_id))
         else:
-            print("X-Request-Id not found in the response headers.")
+            print(nil)
     except IndexError:
         print("Usage: python script.py <URL>")
 
