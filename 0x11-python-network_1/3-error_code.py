@@ -15,9 +15,9 @@ def send_get_request(url):
             response_body = response.read().decode('utf-8')
             print(response_body)  # Print the response body
     except urllib.error.HTTPError as e:
-        print("HTTP Error: {0}, {1}".format(e.code, e.reason))
+        print("Error code: {0}".format(e.code))
     except urllib.error.URLError as e:
-        print("URL Error: {0}".format(e.reason))
+        print("Error code: {0}".format(e.code))
 
 
 if __name__ == "__main__":
