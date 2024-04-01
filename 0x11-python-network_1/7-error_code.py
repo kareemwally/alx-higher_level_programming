@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-""" a simple script to send request"""
-import sys
+"""Fetching the response body from a URL using the requests package"""
 import requests
+import sys
 
 
 def main():
-    """ the main function"""
+    """Get the response body from the URL"""
     try:
         url = sys.argv[1]
-        res = requests.get(url)
-        res.raise_for_status()
-        print(res.text)
-    except requests.exceptions.HTTPError as http_err:
-        print("Error code:".format(res.status_code))
+        response = requests.get(url)
+        if response.status_code >= 400:
+            print("Error code: {0}".format(response.status_code))
+        else:
+            print(response.text)
+    except IndexError:
+        print("Usage: python script.py <URL>")
 
 
 if __name__ == "__main__":
