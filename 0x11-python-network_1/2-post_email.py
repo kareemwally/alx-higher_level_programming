@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""a script to make post data into url using urllib module"""
 import sys
 import urllib.parse
 import urllib.request
