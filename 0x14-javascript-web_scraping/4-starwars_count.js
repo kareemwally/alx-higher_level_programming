@@ -11,7 +11,7 @@ const characterId = 18;
 
 request(apiUrl, (error, response, body) => {
   if (error) {
-    throw (error);
+    console.log(error);
     return;
   }
 
