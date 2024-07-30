@@ -1,19 +1,33 @@
 #!/usr/bin/node
-
 const request = require('request');
-const url = process.argv[2];
 
-request(url, function (err, respose, body) {
-  if (err) {
-    console.log(err);
+if (process.argv.length !== 3) {
+  console.error('Usage: ./4-starwars_count.js <API_URL>');
+  process.exit(1);
+}
+
+const apiUrl = process.argv[2];
+const characterId = 18;
+
+request(apiUrl, (error, response, body) => {
+  if (error) {
+    console.error(error);
+    return;
   }
-  let res = 0;
-  const characterlist = JSON.parse(body).results;
-  for (let i = 0; i < 7; i++) {
-    const temp = characterlist[i].characters;
-    for (let j = 0; j < temp.length; j++) {
-      if (temp[j].includes('18')) { res++; }
+
+  if (response.statusCode !== 200) {
+    console.error(`Failed to fetch API: ${response.statusCode}`);
+    return;
+  }
+
+  const films = JSON.parse(body).results;
+  let count = 0;
+
+  films.forEach(film => {
+    if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
+      count++;
     }
-  }
-  console.log(res);
+  });
+
+  console.log(count);
 });
