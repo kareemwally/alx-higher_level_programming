@@ -37,5 +37,7 @@ class Square:
         """
         printing the shape of square with # char
         """
-        for i in range(self.size):
-            print('#'*self.size)
+        l = '#'*self.size if self.size else '\n'
+        for i in range(self.size - 1):
+            print(l)
+        print(l)
