@@ -35,7 +35,7 @@ class Square:
 
     def my_print(self):
         """
-        printing the shape of square with # char
+        printing the shape of square with # character
         """
         if self.size:
             shape = '#'*self.size
