@@ -46,6 +46,20 @@ Traceback (most recent call last):
     raise TypeError("div must be a number")
 TypeError: div must be a number
 
+tseting a missing arg `div`
+>>> print(matrix_divided(matrix))
+Traceback (most recent call last):
+  File "2-matrix_divided", line 50, in <module>
+    print(matrix_divided(matrix))
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+testing missing all the args
+>>> print(matrix_divided())
+Traceback (most recent call last):
+  File "2-matrix_divided.txt", line 57, in <module>
+    print(matrix_divided())
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 testing a non Int/Float 2D array
 >>> matrix = [[1,2,3],['s',8,9]]
 >>> print(matrix_divided(matrix,2))
