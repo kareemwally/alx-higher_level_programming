@@ -55,3 +55,13 @@ Traceback (most recent call last):
   File "/home/kareem/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 25, in matrix_divided
     raise TypeError("matrix must be a matrix(list of lists) of integers/floats")
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+testing a non Quadratic 2d array
+>>> matrix=[[1,2,3],[4,5]]
+>>> print(matrix_divided(matrix,2))
+Traceback (most recent call last):
+  File "2-matrix_divided.txt", line 61, in <module>
+    print(matrix_divided(matrix, 2))
+  File "/home/kareem/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 29, in matrix_divided
+    raise TypeError(Errors_msgs[2])
+TypeError: Each row of the matrix must have the same size
