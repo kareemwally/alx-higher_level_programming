@@ -1,0 +1,57 @@
+the ``4-print_square`` module
+==========================
+using the ``print_square`` function
+
+importing the module
+>>> print_square = __import__('4-print_square').print_square
+testing the `size` arg type
+
+>>> print_square('5')
+Traceback (most recent call last):
+  File "4-print_square.txt", line 9, in <module>
+    print_square('5')
+  File "./4-print_square.py", line 13, in print_square
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+>>> print_square(True)
+Traceback (most recent call last):
+  File "4-print_square.txt", line 17, in <module>
+    print_square(True)
+  File "./4-print_square.py", line 13, in print_square
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+>>> print_square(-0.3)
+Traceback (most recent call last):
+  File "4-print_square.txt", line 25, in <module>
+    print_square(-0.3)
+  File "./4-print_square.py", line 13, in print_square
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+tseting no args given
+>>> print_square()
+Traceback (most recent call last):
+  File "4-print_square.txt", line 34, in <module>
+    print_square()
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+testing `size` as int
+>>> print_square(6)
+######
+######
+######
+######
+######
+######
+
+>>> print_square(0)
+
+>>> print_square(-2)
+Traceback (most recent call last):
+  File "4-print_square.txt", line 47, in <module>
+    print_square(-2)
+  File "./4-print_square.py", line 16, in print_square
+    raise ValueError("size must be >= 0")
+ValueError: size must be >= 0
