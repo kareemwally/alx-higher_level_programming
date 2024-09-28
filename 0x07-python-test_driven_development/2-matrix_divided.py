@@ -7,7 +7,7 @@ Errors_msgs = [
         "div must be a number",
         "division by zero",
         "Each row of the matrix must have the same size",
-        "matrix must be a matrix(list of lists) of integers/floats"
+        "matrix must be a matrix (list of lists) of integers/floats"
         ]
 
 
