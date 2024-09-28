@@ -45,3 +45,13 @@ Traceback (most recent call last):
   File "/home/kareem/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 13, in matrix_divided
     raise TypeError("div must be a number")
 TypeError: div must be a number
+
+testing a non Int/Float 2D array
+>>> matrix = [[1,2,3],['s',8,9]]
+>>> print(matrix_divided(matrix,2))
+Traceback (most recent call last):
+  File "2-matrix_divided.txt", line 51, in <module>
+    print(matrix_divided(matrix, 2))
+  File "/home/kareem/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 25, in matrix_divided
+    raise TypeError("matrix must be a matrix(list of lists) of integers/floats")
+TypeError: matrix must be a matrix(list of lists) of integers/floats
