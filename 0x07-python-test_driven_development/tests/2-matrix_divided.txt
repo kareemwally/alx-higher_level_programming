@@ -1,0 +1,47 @@
+The ``2-matrix_divided`` module
+========================
+
+Using ``matrix_divided``
+---------------------
+importing the function matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+1st arg is a 2D Float/Int array
+2nd arg is 0
+
+>>> matrix = [[1,2,3],[4,5,6]]
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+  File "2-matrix_divided.txt", line 13, in <module>
+    print(matrix_divided(matrix, 0))
+  File "/home/kareem/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 16, in matrix_divided
+    raise ZeroDivisionError("division by zero")
+ZeroDivisionError: division by zero
+
+2nd arg is Int
+
+>>> print(matrix_divided(matrix, 4))
+[[0.25, 0.5, 0.75], [1.0, 1.25, 1.5]]
+
+2nd arg is Float
+
+>>> print(matrix_divided(matrix, 1.5))
+[[0.67, 1.33, 2.0], [2.67, 3.33, 4.0]]
+
+2nd arg isn't Int/Float
+
+>>> print(matrix_divided(matrix,'s'))
+Traceback (most recent call last):
+  File "2-matrix_divided.txt", line 33, in <module>
+    print(matrix_divided(matrix, 's'))
+  File "/home/kareem/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 13, in matrix_divided
+    raise TypeError("div must be a number")
+TypeError: div must be a number
+
+>>> print(matrix_divided(matrix,None))
+Traceback (most recent call last):
+  File "2-matrix_divided.txt", line 41, in <module>
+    print(matrix_divided(matrix, None))
+  File "/home/kareem/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 13, in matrix_divided
+    raise TypeError("div must be a number")
+TypeError: div must be a number
