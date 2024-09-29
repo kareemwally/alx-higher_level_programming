@@ -17,11 +17,12 @@ def least_index(res, start=0):
         return None
     else:
         if dot < 0:
-            return ques if ques < colon or colon == -1 else colon
+            return ques if (ques < colon and ques != -1) \
+                    or colon == -1 else colon
         if ques < 0:
-            return dot if dot < colon or colon == -1 else colon
+            return dot if (dot < colon and dot != -1) or colon == -1 else colon
         if colon < 0:
-            return dot if dot < ques or ques == -1 else ques
+            return dot if (dot < ques and dot != -1) or ques == -1 else ques
         return dot if dot < ques and dot < colon \
             else ques if ques < dot and ques < colon else colon
     return -1
@@ -37,7 +38,7 @@ def text_indentation(text):
     while True:
         end = least_index(text, start)
         if end < 0:
-            print(text[start:].strip(), end='')
+            print(text[start:].strip())
             break
         sub = text[start:end + 1].strip()
         print(sub + 2 * '\n', end='')
