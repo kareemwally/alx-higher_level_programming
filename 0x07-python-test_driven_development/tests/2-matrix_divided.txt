@@ -38,7 +38,7 @@ Traceback (most recent call last):
     raise TypeError("div must be a number")
 TypeError: div must be a number
 
->> print(matrix_divided(matrix, 10000.0))
+>> print(matrix_divided(matrix, 1000000000.0))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
 >>> print(matrix_divided(matrix,None))
