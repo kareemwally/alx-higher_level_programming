@@ -4,3 +4,39 @@ using the ``text_indentation`` function
 
 importing the module
 >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+testing `text` type
+>>> text_indentation(True)
+Traceback (most recent call last):
+  File "5-text_indentation.txt", line 9, in <module>
+    text_indentation(True)
+  File "./5-text_indentation.py", line 36, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+
+>>> text_indentation(50)
+Traceback (most recent call last):
+  File "5-text_indentation.txt", line 9, in <module>
+    text_indentation(True)
+  File "./5-text_indentation.py", line 36, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+
+testing a missing arg
+>>> text_indentation()
+Traceback (most recent call last):
+  File "./5-text_indentation.py", line 46, in <module>
+    text_indentation()
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> msg = "Hello. I wanna : end this ? suffering"
+
+>>> text_indentation(msg)
+Hello.
+
+I wanna :
+
+end this ?
+
+suffering.
+
