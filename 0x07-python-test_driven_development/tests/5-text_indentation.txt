@@ -29,14 +29,14 @@ Traceback (most recent call last):
     text_indentation()
 TypeError: text_indentation() missing 1 required positional argument: 'text'
 
->>> msg = "Hello. I wanna : end this ? suffering"
+>>> msg = "Hello. I wanna : end this ? suffering."
 
 >>> text_indentation(msg)
 Hello.
-
+<BLANKLINE>
 I wanna :
-
+<BLANKLINE>
 end this ?
-
+<BLANKLINE>
 suffering.
-
+<BLANKLINE>
