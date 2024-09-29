@@ -40,5 +40,6 @@ def text_indentation(text):
             print(text[start:].strip(), end='')
             break
         sub = text[start:end + 1].strip()
-        print(sub, '\n')
+        print(sub+'\n',end='')
         start = end+1
+text_indentation("Holberton.School")
