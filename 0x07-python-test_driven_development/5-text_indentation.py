@@ -38,7 +38,7 @@ def text_indentation(text):
     while True:
         end = least_index(text, start)
         if end < 0:
-            print(text[start:].strip())
+            print(text[start:].strip(), end='')
             break
         sub = text[start:end + 1].strip()
         print(sub + 2 * '\n', end='')
